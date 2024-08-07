@@ -13,6 +13,7 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
+            overflow-y: auto; /* Allow scrolling */
         }
         .icons {
             display: flex;
@@ -23,11 +24,11 @@
             width: 32px;
             height: 32px;
         }
-        #repo-list {
+        #repo-list, #cv-list {
             list-style-type: none;
             padding: 0;
         }
-        .repo-item {
+        .repo-item, .cv-item {
             margin: 10px 0;
             border: 1px solid #ddd;
             padding: 10px;
@@ -36,11 +37,11 @@
             max-width: 600px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .repo-item a {
+        .repo-item a, .cv-item a {
             text-decoration: none;
             color: #0366d6;
         }
-        .repo-item a:hover {
+        .repo-item a:hover, .cv-item a:hover {
             text-decoration: underline;
         }
     </style>
@@ -63,8 +64,66 @@
         <ul id="repo-list">
             <li class="repo-item">
                 <strong>Advizer</strong>
-                <p>An Conversational LLM Webapp for Financial Guidance, watch this space as further features are rolled out</p>
+                <p>A Conversational LLM Webapp for Financial Guidance, watch this space as further features are rolled out</p>
                 <a href="https://advizer.onrender.com/" target="_blank">Visit Website (Free Hosting; Slow)</a>
+            </li>
+        </ul>
+
+        <h2>Recent GitHub Repositories</h2>
+        <ul id="repo-list"></ul>
+
+        <h2>Chronological Curriculum Vitae</h2>
+        <ul id="cv-list">
+            <li class="cv-item">
+                <strong>Global Data Plc – Economist (Intern), (part-time, Dec 2023 – Current) (London) tslombard.com</strong>
+                <p>› Creating, enhancing, and refactoring ML/Econometrics forecasting models and porting legacy systems/worfklows</p>
+                <p>› Lead ongoing development of TS Lombard’s China CPI/PPI/GDP workflow and refinement of associated predictive models</p>
+                <p>› Creation of parametric market event triggers for financial securities, targeting clients with AI/ML (conversation embeddings)</p>
+            </li>
+            <li class="cv-item">
+                <strong>ARC Research Ltd - Research Analyst (Dec 2021 – Sep 2023) (Guernsey, Channel Islands) assetrisk.com</strong>
+                <p>› ETL and pre-processing of data from multi-asset/equity space and collaborating on the production of indices & reporting</p>
+                <p>› Measurement of ex-post absolute/relative performance/risk of multi-asset portfolios and client models vs peer groups</p>
+                <p>› Feature selection and continual development of systematic MVO-like ETF strategy w/ large capital for client funds</p>
+                <p>› The improvement of in-house quantitative models, documentation and creating new services with the development team</p>
+                <p>› Managing/maintaining the relationship of a large subset of research’s client book of vendors/managers/intermediaries</p>
+                <p>› Presentation and communication of abstract and complex ideas to stakeholders of varying seniorities and skillsets</p>
+                <p>› Contributing to periodic and ad-hoc written & quantitative content via research/analysis with private & proprietary data</p>
+                <p>› Chief responsibility/governance of Models & Funds database that serviced manager selection team and intermediaries</p>
+                <p>› Front-office duties including post-signing communication, onboarding & facilitation of services, reporting, and analysis</p>
+            </li>
+            <li class="cv-item">
+                <strong>Palm Shipping Agency Ltd - Financial Accountant (Dec 2013 - Dec 2017) (Malta) palmshipping.com</strong>
+                <p>› Issuing and posting of pro-forma/actual accounting docs and extensive use of VBA for optimisation of operational efficiency</p>
+                <p>› Management and credit control of AR/AP, account reconciliations, accruals, PnL reports, closing memorandum ledgers</p>
+                <p>› Active listening and liaison with all stakeholders, handling enquiries, credit terms, and contract/pricing amendments</p>
+            </li>
+            <li class="cv-item">
+                <strong>IBIS Group Ltd – (Intern) (Aug 2013 - Nov 2013) (Malta) ibisgroup.eu</strong>
+                <p>› Assisting server hardware engineers with installation, troubleshooting and maintenance of network infrastructure</p>
+            </li>
+            <li class="cv-item">
+                <strong>Education</strong>
+                <p>Data Science and Artificial Intelligence MSc (Distinction) L7 (Mile End, London)</p>
+                <p>› completing dissertation on empirically assessing Classical and SOTA ML approaches on forecasting implied CDS Vol Indices.</p>
+                <p>Queen Mary, University of London (2023 - Current)</p>
+                <p>Economics and Business BSc (2:1, Second Class Honours—Upper Division) L6 (Bloomsbury, London)</p>
+                <p>Birkbeck College, University of London (2018 - 21)</p>
+                <p>IT BTEC Diploma L3 / OCR National in ICT (First Award L3), 7 GCSEs (A-B) (Guernsey, Channel Islands)</p>
+                <p>CoFE (2010 - 12) / Les Beaucamps High School (2005 - 10)</p>
+            </li>
+            <li class="cv-item">
+                <strong>Tech</strong>
+                <p>Applications: MS (Excel/Office/SSMS/VS Code/Dynamics), PostgreS/pgAdmin, Jupyter, Conda, Google Cloud, Colab, Mathematica, Refinitiv Eikon/Datastream/Lipper, Git</p>
+                <p>Languages: Python - 2yrs (Pandas/Polars/NumPy/PyTorch/Plotly/SKLearn/etc), Wolfram - 2yrs, SQL - 2yrs, JS - 0.5yrs</p>
+            </li>
+            <li class="cv-item">
+                <strong>Knowledge</strong>
+                <p>Market Risk, Statistics, Machine Learning, Data Science, Security Pricing & Performance Measurement, Econometrics, Empirical Research, Mathematical Finance, Probability, ANNs {MLPs, RNNs, CNNs}, EDA/Feature Engineering, Financial Time-Series, Convex/Non-convex optimisation, Time-Series Validation, Multi-Asset/CTAs/ETFs, Equities/Fixed-Income</p>
+            </li>
+            <li class="cv-item">
+                <strong>Other</strong>
+                <p>GAIN (Girls Are Investors) Investment Challenge Judge (April 2023 & 2024), Mathematics for Machine Learning (Imperial College London by Coursera), DofE Silver, ICDL Cert, LLM WebApp Project: advizer.onrender.com</p>
             </li>
         </ul>
     </div>
