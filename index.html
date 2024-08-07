@@ -23,6 +23,26 @@
             width: 32px;
             height: 32px;
         }
+        #repo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #repo-list li {
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #repo-list li a {
+            text-decoration: none;
+            color: #0366d6;
+        }
+        #repo-list li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -33,16 +53,34 @@
         <a href="https://www.linkedin.com/in/roberttaylor94/" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
         </a>
-        <a href="mailto:<robert.taylor.94@outlook.com>" target="_blank">
+        <a href="mailto:robert.taylor.94@outlook.com" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
         </a>
     </div>
     <h1>Robert Taylor</h1>
     <div id="content">
-        <p id="linkedin-info">LinkedIn Info here...</p>
         <h2>Recent GitHub Repositories</h2>
         <ul id="repo-list"></ul>
     </div>
-    <script src="script.js"></script>
+    <script>
+        const githubUsername = 'robtaylor94'; // Replace with your GitHub username
+
+        const fetchRepos = async () => {
+            const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=created&per_page=5`);
+            const repos = await response.json();
+            const repoList = document.getElementById('repo-list');
+            repos.forEach(repo => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>${repo.name}</strong>
+                    <p>${repo.description || 'No description available'}</p>
+                    <a href="${repo.html_url}" target="_blank">View Repository</a>
+                `;
+                repoList.appendChild(listItem);
+            });
+        };
+
+        fetchRepos().catch(error => console.error('Error fetching repos:', error));
+    </script>
 </body>
 </html>
