@@ -1,1 +1,48 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Taylor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .icons img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="icons">
+        <a href="https://github.com/robtaylor94" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/roberttaylor94/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:<robert.taylor.94@outlook.com>" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        </a>
+    </div>
+    <h1>Robert Taylor</h1>
+    <div id="content">
+        <p id="linkedin-info">LinkedIn Info here...</p>
+        <h2>Recent GitHub Repositories</h2>
+        <ul id="repo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
